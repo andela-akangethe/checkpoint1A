@@ -2,13 +2,19 @@
 namespace Alex;
 
 /**
-* author: Alex Kangethe
-* This is an OOP PHP CRUD class
+* This is an OOP PHP CRUD class in which you can create,
+* read, delete and update entries in the dictionary.
+*
+* @author Alex Kangethe
 */
 
 
 class UrbanDictionary
 {
+	/**
+	* To retrieve an entry if present and throw an exception if not
+	* present
+	*/
 
 	public function retrieve($key)
 	{
@@ -18,6 +24,11 @@ class UrbanDictionary
 			throw new Exception("No such key exists");	
 		}
 	}
+
+	/**
+	* To update an entry if present and throw an exception if not
+	* present
+	*/
 
 	public function update($key, $change)
 	{
@@ -29,6 +40,11 @@ class UrbanDictionary
 		}
 	}
 
+	/**
+	* To add an entry if present and throw an exception if already
+	* present
+	*/
+
 	public function add($key, $add)
 	{
 		if (isset(Datastore::$data[$key])) {
@@ -38,6 +54,11 @@ class UrbanDictionary
 			return Datastore::$data;
 		}
 	}
+
+	/**
+	* To delete an entry if present and throw an exception if not
+	* present
+	*/
 
 	public function delete($key) 
 	{

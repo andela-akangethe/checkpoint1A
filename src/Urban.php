@@ -1,6 +1,12 @@
 <?php 
 namespace Alex;
 
+/**
+* This is a class which just contains a public static property
+*
+* @author Alex Kangethe
+*/
+
 class Urban 
 {
 	public static $data = [

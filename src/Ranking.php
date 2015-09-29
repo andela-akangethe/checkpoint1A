@@ -2,8 +2,11 @@
 namespace Alex;
 
 /**
-* author: Alex Kangethe
-* To rank words instances
+* This code counts the word occurence instance
+* in the sample-sentence and throws an error if there is
+* no sample-sentence
+*
+* @author Alex Kangethe
 */
 
 class Ranking
