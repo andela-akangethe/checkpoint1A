@@ -1,14 +1,14 @@
 <?php
 
-require "../src/Ranking.php";
+use Alex\Ranking;
 
-class WordInstanceTest extends PHPUnit_Framework_TestCase
+class RankingTest extends PHPUnit_Framework_TestCase
 {
 	public $test;
 
 	public function setUp()
 	{
-		$this->test = new WordInstance(
+		$this->test = new Ranking(
 			[
 				"Slang" => "Tight",
 				"description" => "When someone performs an awesome task",

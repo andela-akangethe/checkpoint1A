@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<phpunit bootstrap="./vendor/autoload.php">
+  <testsuites>
+    <testsuite name="checkpoint1A">
+      <file>tests/RankingTest.php</file>
+      <file>tests/UrbanDictionaryTest.php</file>
+    </testsuite>
+  </testsuites>
+</phpunit>

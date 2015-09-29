@@ -1,11 +1,12 @@
-<?php
+<?php 
+namespace Alex;
 
-/*
+/**
 * author: Alex Kangethe
 * To rank words instances
 */
 
-class WordInstance
+class Ranking
 {	
 	public $word;
 

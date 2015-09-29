@@ -1,23 +1,19 @@
 <?php 
+namespace Alex;
 
-/*
+/**
 * author: Alex Kangethe
 * This is an OOP PHP CRUD class
 */
 
-class Urban
-{
-	public $data;
 
-	public function __construct($data)
-	{
-		$this->data = $data;
-	}
+class UrbanDictionary
+{
 
 	public function retrieve($key)
 	{
-		if (isset($this->data[$key])) {
-			return $this->data[$key];
+		if (isset(Datastore::$data[$key])) {
+			return Datastore::$data[$key];
 		} else {
 			throw new Exception("No such key exists");	
 		}
@@ -25,9 +21,9 @@ class Urban
 
 	public function update($key, $change)
 	{
-		if (isset($this->data[$key])) {
-			$this->data[$key] = $change;
-			return $this->data;
+		if (isset(Datastore::$data[$key])) {
+			Datastore::$data[$key] = $change;
+			return Datastore::$data;
 		} else {
 			throw new Exception("Sorry that slang does not exist");	
 		}
@@ -35,19 +31,19 @@ class Urban
 
 	public function add($key, $add)
 	{
-		if (isset($this->data[$key])) {
+		if (isset(Datastore::$data[$key])) {
 			throw new Exception("That slang already exists");	
 		} else {
-			$this->data[$key] = $add;
-			return $this->data;
+			Datastore::$data[$key] = $add;
+			return Datastore::$data;
 		}
 	}
 
 	public function delete($key) 
 	{
-		if (isset($this->data[$key])) {
-			unset($this->data[$key]);
-			return $this->data;
+		if (isset(Datastore::$data[$key])) {
+			unset(Datastore::$data[$key]);
+			return Datastore::$data;
 		} else {
 			throw new Exception("The said key is not available\n");
 		}
